@@ -119,11 +119,8 @@ function spawnShrubs() {
     var rand = Math.round(random(1,3));
     switch(rand) {
       case 1: shrub.addImage(shrub1);
-              break;
       case 2: shrub.addImage(shrub2);
-              break;
       case 3: shrub.addImage(shrub3);
-              break;
       default: break;
     }
     
@@ -143,7 +140,7 @@ function spawnShrubs() {
 function spawnObstacles() {
   if(frameCount % 120 === 0) {
 
-    var obstacle = createSprite(camera.position.x+400,330,40,40);
+    var obstacle = createSprite(camera.position+400,330,40,40);
     obstacle.setCollider("rectangle",0,0,200,200)
     obstacle.addImage(obstacle1);
     obstacle.velocityX = -(6 + 3*score/100)
